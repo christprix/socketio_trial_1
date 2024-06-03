@@ -25,5 +25,6 @@ form.addEventListener("submit", e => {
 function displayMessage(message) {
   const div = document.createElement("div")
   div.textContent = message
+  div.classList.add("comment");
   chatbox.append(div)
 }
