@@ -10,11 +10,8 @@ const chatbox = document.querySelector("#chatbox");
 
 form.addEventListener("submit", e => {
   e.preventDefault();
-  message = message.value;
-  console.log(message);
-  let li = document.createElement('li');
-  li.innerHTML = message;
-  chatbox.appendChild(li)
-  socket.emit("send-message", message)
-  message = " "
+  sendingMessage = message.value;
+  console.log(sendingMessage);
+  socket.emit("send-message", sendingMessage)
+  message.value = ""
 });
